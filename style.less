@@ -1,0 +1,1056 @@
+/*
+File Name: style.css
+Date: 03/6/19
+Programmer: Karim Mazza
+*/
+
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MOBILE STYLESHEET */
+
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  background-color: @lightColor;
+  color: @darkColor;
+  padding: 20px;
+}
+header {
+	background-image:url(../images/abstract-design.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+
+		h1 {
+		  .headerStyle(@color4; 2em);
+			text-align: center;
+			line-height: 1.4em;
+			padding-top: 8em;
+		}
+	h2 {
+		.headingStyle(@color1; 1.4em);
+		text-align: center;
+		line-height: 1.2em;
+	}
+	h3 {
+		.headingStyle(@color1; 1.1em);
+		text-align: center;
+	}
+
+}
+nav {
+		width: 100%;
+		background: black;
+		color: @lightColor;
+		position: absolute;
+     	top: 0;
+
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			
+			li {
+				list-style: none;
+				display: inline-block;
+				padding: 20px;
+			}
+			li:hover {
+				background-color: @color1;
+			}
+			li a {
+				color: @lightColor;
+				text-decoration: none;
+			}	
+		}
+	.toggle {
+		display: block;
+	}
+	ul {
+		width: 100%;
+		display: none;
+		li {
+			display: block;
+			text-align: center;
+		}
+	}
+	.active {
+		display: block;
+	}
+}
+main {
+	padding: 1em;
+
+	h1 {
+		.headerStyle(@color5; 3em);
+		padding: 20px;
+		text-align: center;
+	    line-height: normal;
+	}
+
+   h2 {
+  		.headingStyle(@color1; 1.6em);
+}
+
+   h3 {
+  		.headingStyle(@color2; 1.1em);
+    	.underItalic();
+}
+
+   h4 {
+  		.headingStyle(@color1; 1em);
+}
+
+   h5 {
+  		.headingStyle(@color3; .85em);
+}
+
+   h6 {
+  		.headingStyle(@color3; .75em);
+}
+        ul {
+        text-decoration: none;
+        list-style-type: circle;
+        
+        padding: .2em;
+        margin-left: .5em;
+
+    }
+	p {
+		padding: 1em;
+		font-family: "Helevtica", sans-serif;
+		font-size: 1.1em;
+		color: @darkColor;
+	}
+	
+	.slideshow-container {
+		display: none;
+	}
+	#diff {
+		p{
+			color: @color5;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+	}
+	#imageicon {
+		float: right;
+	}
+	#bagcolor {
+		background-color: @lightColor;
+		border: 2px solid #d000e1;
+		border-radius: 5px 15px 5px;
+	}
+	#baglicolor {
+		background-color: @lightColor;
+		border: 2px solid #1930c3;
+		border-radius: 5px 15px 5px;
+	}
+	#bagdcolor {
+		background-color: @lightColor;
+		border: 2px solid #11d0a1;
+		border-radius: 5px 15px 5px;
+	}
+	section {
+		
+		p {
+			#bagcolor {
+				background-color: @lightColor;
+				border: 2px solid #d000e1;
+				border-radius: 5px 15px 5px;
+			}
+			#baglicolor {
+				background-color: @lightColor;
+				border: 2px solid #1930c3;
+				border-radius: 5px 15px 5px;
+			}
+				#bagdcolor {
+				background-color: @lightColor;
+				border: 2px solid #11d0a1;
+				border-radius: 5px 15px 5px;
+			}
+		}
+	}
+.mb {
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+}
+table { margin: auto;
+        width: 80%;
+        border: 1px solid @darkColor;
+        border-collapse: collapse; 
+        margin-bottom: 1em;
+		text-align: center;
+td, th { padding: 5px;
+         border: 1px solid @darkColor; }
+th {text-align: center; }
+tr:nth-of-type(even) { background-color: @lightColor5; }
+caption { 
+		  color: @color2;
+		  margin: 1em; 
+          font-weight: bold; 
+          font-size: 120%; }
+}
+	#source {
+		color: red;
+		padding: 1em;
+		text-align: center;
+	}
+	form {
+		margin: 20px auto;
+		width: 320px;
+		color: @color2;
+	}
+	input {
+		padding: 10px;
+		font-size: inherit;
+	}
+	input[type="text"] {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+		border: 2px solid @lightColor5;
+	
+	}
+		input[type="email"] {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+		border: 2px solid @lightColor5;
+	
+	}
+		input[type="tel"] {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+		border: 2px solid @lightColor5;
+	
+	}
+		input[type="number"] {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+		border: 2px solid @lightColor5;
+	
+	}
+	input[type="radio"] {
+		margin: 0 8px 25px 18px;
+	}
+		input[type="radio"]:first-child {
+		margin-left: 0;
+	}
+
+		label {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+	
+	}
+		textarea {
+		display: block;
+		margin-bottom: 25px;
+		width: 100%;
+		border: 2px solid @lightColor5;
+	
+	}
+		input[type="submit"] {
+		width: 344px;
+		height: 45px;
+		border: none;
+		background: @color1;
+		color: @lightColor;
+	
+	}
+	
+	/* Styling The Select options in the Registration Form */
+	
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: inherit;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: @color1;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 35px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: @darkColor1 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: @color5;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+}
+
+
+  footer {
+    background-color: @lightColor;
+    font-size: .70em;
+    font-style: italic;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+	  
+	  
+.facebook-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.facebook-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+	  			/* Social media icons styles */
+				.fa {
+				  padding: 20px;
+				  font-size: 30px;
+				  text-align: center;
+				  text-decoration: none;
+				  margin: 5px 2px;
+				  border-radius: 50%;
+				}
+
+				.fa:hover {
+					opacity: 0.7;
+				}
+
+				.fa-facebook {
+				  background: #3B5998;
+				  color: white;
+				}
+
+				.fa-twitter {
+				  background: #55ACEE;
+				  color: white;
+				}
+	  
+/* Styling The FAQ Page */
+	  
+	  /* definition list */
+
+dt, dd {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 2px 0;
+}
+
+dt {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+dt:hover {
+    color: #ac92ec;
+}
+
+dd {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* arrow icon left */
+
+dt:before {
+    border: 0.5em solid;
+    border-color: transparent transparent transparent #f2eeef;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 0;
+}
+
+dt:hover:before {
+    border-left-color: #ac92ec;
+
+}
+
+/* arrow icon down */
+
+dt.open:before {
+    border-color: #f2eeef transparent transparent transparent;
+    border-bottom-width: 0;
+}
+    
+dt.open:hover:before {
+    border-left-color: transparent;
+    border-top-color: #ac92ec;
+}
+
+.headings {
+    font-family: "Bangers", cursive;
+}
+/* End Of Styling The FAQ Page */
+  }
+
+/*
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+
+	header {
+		h1 {
+		  .headerStyle(@color4; 1.8em);
+			text-align: center;
+			line-height: 1.4em;
+			padding-top: 1.2em;
+		}
+			h2 {
+		.headingStyle(@color1; 1.4em);
+		text-align: center;
+		line-height: 1.2em;
+	}
+	h3 {
+		.headingStyle(@color1; 1.1em);
+		text-align: center;
+	}
+
+	}
+
+nav {
+		width: 100%;
+		background: black;
+		position: static;
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			display: inline-block;
+			li {
+				list-style: none;
+				display: inline-block;
+				padding: 20px;
+			}
+			li:hover {
+				background-color: @color1;
+			}
+			li a {
+				color: @lightColor;
+				text-decoration: none;
+			}	
+		}
+		.toggle {
+			width: 100%;
+			padding: 10px 20px;
+			background: grey;
+			text-align: left;
+			box-sizing: border-box;
+			color: @lightColor;
+			font-size: 30px;
+			display: none;
+		}
+		
+}
+
+
+
+	main {
+		padding: 1em;
+
+		body {
+			font-family: "Helvetica", sans-serif;
+			font-size: 14px;
+			line-height: 1.5em;
+			background-color: @lightColor;
+			color: @darkColor;
+			padding: 20px;
+		}
+	h1 {
+		.headerStyle(@color5; 3em);
+		padding: 20px;
+		text-align: center;
+		line-height: normal;
+	}
+		h2 {
+			.headingStyle(@color1; 1.2em);
+		}
+
+		h3 {
+			.headingStyle(@color2; 1.1em);
+			.underItalic();
+		}
+
+		h4 {
+			.headingStyle(@color1; 1em);
+		}
+
+		h5 {
+			.headingStyle(@color3; .85em);
+		}
+
+		h6 {
+			.headingStyle(@color3; .75em);
+		}
+		ul {
+			text-decoration: none;
+			list-style-type: circle;
+
+			padding: .2em;
+			margin-left: .5em;
+
+		}
+		p {
+			padding: 1em;
+			font-family: "Helevtica", sans-serif;
+			font-size: 1.1em;
+			color: @darkColor;
+		}
+		
+			/* Styling the Slideshow */
+
+		.slideshow-container {
+			display: block;
+		}
+		
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.mb {
+	display: none;
+  }
+		
+table { margin: auto;
+        width: 60%;
+        border: 1px solid #3f2860;
+        border-collapse: collapse; 
+        margin-bottom: 1em; }
+td, th { padding: 5px;
+         border: 1px solid #3f2860; }
+th {text-align: center; }
+tr:nth-of-type(even) { background-color: #9bc1c2; }
+caption { margin: 1em; 
+          font-weight: bold; 
+          font-size: 120%; }
+
+		
+/* Styling The FAQ Page */
+	  
+	  /* definition list */
+
+dt, dd {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 2px 0;
+}
+
+dt {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+dt:hover {
+    color: #ac92ec;
+}
+
+dd {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* arrow icon left */
+
+dt:before {
+    border: 0.5em solid;
+    border-color: transparent transparent transparent #f2eeef;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 0;
+}
+
+dt:hover:before {
+    border-left-color: #ac92ec;
+
+}
+
+/* arrow icon down */
+
+dt.open:before {
+    border-color: #f2eeef transparent transparent transparent;
+    border-bottom-width: 0;
+}
+    
+dt.open:hover:before {
+    border-left-color: transparent;
+    border-top-color: #ac92ec;
+}
+
+.headings {
+    font-family: "Bangers", cursive;
+}
+/* End Of Styling The FAQ Page */
+		
+	}
+
+		footer {
+			background-color: @lightColor;
+			font-size: .70em;
+			font-style: italic;
+			padding-top: 100px;
+			padding-bottom: 10px;
+			text-align: center;
+			#exampleimg {
+				width: 680px;
+				height: 100px;
+				border: 1px solid @darkColor;
+				padding: 3em;
+				padding-left: 1em;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+}
+
+	/*
+    DESKTOP STYLESHEET
+
+    The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+    */
+	@media only screen and (min-width: 1025px) {
+		
+		body {
+			h2{
+	        	padding-top: 45px;
+			}
+
+		}
+
+		header {
+			.hamburger, .cross {
+				display: none !important;;
+			}
+			h1 {
+			  .headerStyle(@color4; 3em);
+				text-align: center;
+				line-height: 1.4em;
+				padding-top: 1em;
+			}
+			h2 {
+				.headingStyle(@color1; 1.4em);
+				text-align: center;
+				line-height: .5em;
+			}
+			h3 {
+				.headingStyle(@color1; 1.3em);
+				text-align: center;
+			}
+		}
+
+	nav {
+		width: 100%;
+		background: black;
+		position: static;
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			display: inline-block;
+			li {
+				list-style: none;
+				display: inline-block;
+				padding: 20px;
+			}
+			li:hover {
+				background-color: @color1;
+			}
+			li a {
+				color: @lightColor;
+				text-decoration: none;
+			}	
+		}
+		.toggle {
+			width: 100%;
+			padding: 10px 20px;
+			background: grey;
+			text-align: left;
+			box-sizing: border-box;
+			color: @lightColor;
+			font-size: 30px;
+			display: none;
+		}
+		
+}
+		main {
+			padding: 1em;
+
+			body {
+				font-family: "Helvetica", sans-serif;
+				font-size: 14px;
+				line-height: 1.5em;
+				background-color: @lightColor;
+				color: @darkColor;
+				padding: 20px;
+			}
+
+			h1 {
+				.headerStyle(@color5; 3em);
+				text-align: center;
+				padding: 15px;
+				line-height: normal;
+			}
+
+			h2 {
+				.headingStyle(@color1; 1.2em);
+			}
+
+			h3 {
+				.headingStyle(@color2; 1.1em);
+				.underItalic();
+			}
+
+			h4 {
+				.headingStyle(@color1; 1em);
+			}
+
+			h5 {
+				.headingStyle(@color3; .85em);
+			}
+
+			h6 {
+				.headingStyle(@color3; .75em);
+			}
+			ul {
+				text-decoration: none;
+				list-style-type: circle;
+
+				padding: .2em;
+				margin-left: .5em;
+
+			}
+			p {
+				padding: 1em;
+				font-family: "Helevtica", sans-serif;
+				font-size: 1.1em;
+				color: @darkColor;
+			}
+			
+			
+/* Styling the Slideshow */
+	
+		.slideshow-container {
+			display: block;
+		}			
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+			
+.mb {
+    display: none;
+  }	
+			
+table { margin: auto;
+        width: 60%;
+        border: 1px solid #3f2860;
+        border-collapse: collapse; 
+        margin-bottom: 1em; }
+td, th { padding: 5px;
+         border: 1px solid #3f2860; }
+th {text-align: center; }
+tr:nth-of-type(even) { background-color: #9bc1c2; }
+caption { margin: 1em; 
+          font-weight: bold; 
+          font-size: 120%; }
+/* Styling The FAQ Page */
+	  
+	  /* definition list */
+
+dt, dd {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 2px 0;
+}
+
+dt {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+dt:hover {
+    color: #ac92ec;
+}
+
+dd {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* arrow icon left */
+
+dt:before {
+    border: 0.5em solid;
+    border-color: transparent transparent transparent #f2eeef;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 0;
+}
+
+dt:hover:before {
+    border-left-color: #ac92ec;
+
+}
+
+/* arrow icon down */
+
+dt.open:before {
+    border-color: #f2eeef transparent transparent transparent;
+    border-bottom-width: 0;
+}
+    
+dt.open:hover:before {
+    border-left-color: transparent;
+    border-top-color: #ac92ec;
+}
+
+.headings {
+    font-family: "Bangers", cursive;
+}
+/* End Of Styling The FAQ Page */
+			
+		}
+
+		footer {
+			background-color: @lightColor;
+			font-size: .70em;
+			font-style: italic;
+			padding-top: 100px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+	}
